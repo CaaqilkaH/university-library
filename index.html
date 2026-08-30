@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Library System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">📚 Uni<span>Library</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#library">Library</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" id="themeBtn">🌙 Dark Mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">UNIVERSITY LIBRARY SYSTEM</p>
+          <h1>Learn more. <span>Read more.</span> Achieve more.</h1>
+          <p class="hero-desc">A modern digital library where university students can discover books, explore courses, search resources and register online.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#library">Explore Library</a>
+            <a class="btn secondary" href="#register">Register Now</a>
+          </div>
+          <div class="stats">
+            <div><strong>2,500+</strong><small>Books</small></div>
+            <div><strong>40+</strong><small>Courses</small></div>
+            <div><strong>24/7</strong><small>Access</small></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="floating-card card-a">📖<b>Digital Books</b><small>Read anywhere</small></div>
+          <div class="library-illustration">
+            <div class="shelf shelf-1"></div><div class="shelf shelf-2"></div><div class="shelf shelf-3"></div>
+            <div class="book b1"></div><div class="book b2"></div><div class="book b3"></div><div class="book b4"></div>
+            <div class="lamp">💡</div>
+          </div>
+          <div class="floating-card card-b">🔎<b>Smart Search</b><small>Find resources fast</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="library">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">FIND YOUR RESOURCE</p><h2>Library Collection</h2></div>
+          <p>Search and filter the available resources.</p>
+        </div>
+        <div class="search-panel">
+          <input id="searchInput" type="search" placeholder="🔎 Search by book, author or subject...">
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="technology">Technology</option>
+            <option value="business">Business</option>
+            <option value="accounting">Accounting</option>
+            <option value="english">English</option>
+          </select>
+        </div>
+        <div class="book-grid" id="bookGrid"></div>
+        <p class="empty" id="emptyMessage" hidden>No resources found. Try another search or category.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="courses">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">POPULAR STUDY AREAS</p><h2>Course Cards</h2></div>
+          <p>Explore resources related to your department.</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card"><div class="course-icon">💻</div><h3>Computer Science</h3><p>Web development, programming, databases and networking resources.</p><a href="#library">View Resources →</a></article>
+          <article class="course-card"><div class="course-icon">📊</div><h3>Business Administration</h3><p>Management, marketing, entrepreneurship and leadership materials.</p><a href="#library">View Resources →</a></article>
+          <article class="course-card"><div class="course-icon">🧮</div><h3>Accounting</h3><p>Financial accounting, auditing, economics and finance resources.</p><a href="#library">View Resources →</a></article>
+          <article class="course-card"><div class="course-icon">🗣️</div><h3>English Language</h3><p>Grammar, communication, academic writing and vocabulary resources.</p><a href="#library">View Resources →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container slideshow">
+        <div class="slide active"><div class="slide-icon">📚</div><div><p class="eyebrow">LIBRARY UPDATE</p><h2>Study smarter with digital resources.</h2><p>Use the library system to quickly discover resources for assignments, exams and research.</p></div></div>
+        <div class="slide"><div class="slide-icon">🎓</div><div><p class="eyebrow">STUDENT SUPPORT</p><h2>Your academic journey starts here.</h2><p>Find materials organized by subject and make your study time more productive.</p></div></div>
+        <div class="slide"><div class="slide-icon">💡</div><div><p class="eyebrow">LEARNING 24/7</p><h2>Access knowledge whenever you need it.</h2><p>Search the collection, register your account and stay connected with the library.</p></div></div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="register">
+      <div class="container form-layout">
+        <div>
+          <p class="eyebrow">STUDENT REGISTRATION</p>
+          <h2>Create your library account</h2>
+          <p>Complete the form to register for University Library System access.</p>
+          <ul class="check-list">
+            <li>✓ Access library resources</li><li>✓ Search books by category</li><li>✓ Receive study updates</li>
+          </ul>
+        </div>
+        <form id="registrationForm" class="form-card" novalidate>
+          <div class="form-row">
+            <label>Full Name<input id="fullName" type="text" placeholder="Enter your full name"></label>
+            <label>Student ID<input id="studentId" type="text" placeholder="e.g. U2026001"></label>
+          </div>
+          <label>Email Address<input id="email" type="email" placeholder="student@example.com"></label>
+          <label>Department
+            <select id="department">
+              <option value="">Choose department</option><option>Computer Science</option><option>Business Administration</option><option>Accounting</option><option>English</option>
+            </select>
+          </label>
+          <label>Password<input id="password" type="password" placeholder="At least 6 characters"></label>
+          <label class="agree"><input id="agree" type="checkbox"> I agree to the library terms and conditions.</label>
+          <button class="btn primary full" type="submit">Create Account</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div><p class="eyebrow">GET IN TOUCH</p><h2>Contact the Library</h2><p>Have a question? Send us a message and the library team will respond.</p>
+          <div class="contact-info"><p>📍 University Main Campus</p><p>📧 library@university.edu</p><p>📞 +252 63 4** 6362</p><p>📞 +252 63 741 56**</p><p>📞 +252 63 6** 5580</p><p>📞 +252 63 453 **97</p><p>📞 +252 63 323 **31</p></div>
+        </div>
+        <form id="contactForm" class="form-card">
+          <label>Your Name<input id="contactName" type="text" placeholder="Your name"></label>
+          <label>Email<input id="contactEmail" type="email" placeholder="Your email"></label>
+          <label>Message<textarea id="contactMessage" rows="5" placeholder="Write your message..."></textarea></label>
+          <button class="btn primary full" type="submit">Send Message</button>
+          <p class="form-message" id="contactMessageResult"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div><a class="logo" href="#home">📚 Uni<span>Library</span></a><p>University Library System — learning without limits.</p></div>
+      <div><p>© <span id="year"></span> University Library System</p><p>Web Development II Final Project</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
