@@ -31,3 +31,16 @@ body.dark{--bg:#0b1220;--surface:#111a2b;--text:#edf3ff;--muted:#aab6ca;--line:#
 .btn:hover {
     background-color: #dee604 !important;
 }
+.image-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+.image-gallery img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
