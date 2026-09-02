@@ -247,9 +247,10 @@ h1 span{
 }
 .floating-card b{
     font-size:.9rem;
+    color: #ffffff;
 }
 .floating-card small{
-    color:var(--muted);
+    color:#e2e8fe;
     grid-column:2;
 }
 .card-a{
@@ -608,4 +609,67 @@ body.dark .slideshow{
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+h1, h2, h3, h4, h5, h6, strong, b{
+    color: ffffff !important;
+}
+p, small, span, label{
+    color: #e2e8f0 !important;
+}
+.section-head h2{
+    color: #ffffff !important;
+}
+.course-card h3{
+    color: #ffffff !important;
+}
+.eyebrow{
+    color: #60a5fa;
+}
+#register h2{
+    color: #ffffff !important;
+}
+.check-list li{
+    color: #ffffff !important;
+}
+.slideshow .slide.active,
+.slide-icon{
+    color: #ff3b30 !important;
+}
+.dots .dot,
+#dots span{
+    background-color: #ff3b30 !important;
+}
+.dots .dot.active{
+    background-color: #e60000 !important;
+}
+#library h2{
+    color: #000000 !important;
+}
+#library .eyebrow{
+    color: #000000 !important;
+}
+#library .section-head p{
+    color: #333333 !important;
+}
+.hero-text h1 span{
+    color: #02cf0c !important;
+}
+.hero-text .eyebrow{
+    color: #2563eb !important;
+}
+.hero-text .hero-desc{
+    color: #1d4ed8;
+}
+#contact,
+#contact h2,
+#contact .eyebrow,
+#contact .contact-info,
+#contact .contact-info p,
+#contact .form-card label{
+    color: #000000 !important;
+}
+#contact p,
+#contact-grid p,
+#contact-info p{
+    color: #1107cc !important;
 }
